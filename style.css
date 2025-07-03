@@ -1,0 +1,136 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #8260fd;
+  color: #e0f7fa;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.name {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 2s steps(20) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0ch
+  }
+
+  to {
+    width: 28ch
+  }
+}
+
+.name-highlight {
+  color: #f3ff52;
+  font-weight: 1000;
+}
+
+.section {
+  background: #23395d;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.section:hover {
+  transform: scaleX(1.03);
+  transition: 1s;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 0;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.section h2 {
+  color: #f3ff52;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.section li {
+  margin-bottom: 0.7rem;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background: #23395d;
+  color: #fff;
+
+}
+
+footer h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.contacts a {
+  display: inline-block;
+  margin: 3rem 3rem;
+  font-size: 1rem;
+  justify-content: space-between;
+  padding: 20%;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    font-size: 1.8rem;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+  }
+
+  .contacts a {
+    display: block;
+    margin: 0.5rem auto;
+
+
+  }
+
+  .contacts:hover {
+    transform: scaleX(1.03);
+    transition: 1s;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
